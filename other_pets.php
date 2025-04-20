@@ -43,13 +43,16 @@ if ($stmt) {
   <nav class="navbar">
         <div class="logo-container">
             <img src="./images/file.png" alt="Paw Logo" class="paw-logo">
-            <a href="another-index.html" class="logo-text">PawPeace</a>
+            <a href="another-index.php" class="logo-text">PawPeace</a>
         </div>
         <div class="nav-links">
-            <a href="another-index.html" class="nav-link" >Home</a>
-            <a href="another-random.html" class="active nav-link">Rent-a-pet</a>
-            <a href="past-rentals.html"  class="nav-link" >Past rentals</a>
-            <a href="book-visit.html" class="nav-link" >Book a visit</a>
+            <a href="another-index.php" class="nav-link" >Home</a>
+            <a href="another-random.php" class="active nav-link">Rent-a-pet</a>
+            <a href="past-rentals.php"  class="nav-link" >Past rentals</a>
+            <a href="book-visit.php" class="nav-link" >Book a visit</a>
+            <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin'): ?>
+                    <a href="./admin_manage_pets.php" class="nav-link px-3 link-warning">Manage Pets</a>
+                 <?php endif; ?>
         </div>
         <div class="search-account">
             <div class="search-container">
@@ -63,7 +66,7 @@ if ($stmt) {
                     <i class="fas fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="profile.html">Profile</a>
+                    <a href="profile.php">Profile</a>
                     <a href="settings.html">Settings</a>
                     <a href="favorites.html">Favorites</a>
                     <a href="logout.html">Logout</a>
@@ -101,7 +104,9 @@ if ($stmt) {
                     <div class="button-wrapper">
                          <!-- Update links if needed - points to generic detail/form pages -->
                         <a href="./pet_details.php?id=<?= htmlspecialchars($pet['id']) ?>&type=other"><button class="btn outline">DETAILS</button></a>
-                        <a href="./form.php?pet_id=<?= htmlspecialchars($pet['id']) ?>&type=other"><button class="btn fill">RENT NOW</button></a>
+                        <a href="rental_form.php?pet_id=<?= htmlspecialchars($pet['id']) ?>&pet_table=other_pets">
+                            <button class="btn fill">RENT NOW</button>
+                        </a>
                          <!-- Added &type=other in links: optional, helps target pages know which table to query -->
                     </div>
                 </div>

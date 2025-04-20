@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <br>
         <a href="book-a-visit.php" class="btn btn-primary">Back to Booking Form</a>
-        <a href="another-index.html" class="btn btn-secondary">Go to Homepage</a> <!-- Adjust link if needed -->
+        <a href="another-index.php" class="btn btn-secondary">Go to Homepage</a> <!-- Adjust link if needed -->
     </div>
 
     <!-- Optional: Bootstrap JS for potential future components -->

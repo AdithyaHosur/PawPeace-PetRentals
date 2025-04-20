@@ -441,6 +441,9 @@ require_once 'db_connect.php'; // Make sure this path is correct
             <li><a href="./another-random.php" class="nav-link px-3 link-dark">Rent-a-pet</a></li> <!-- Assuming random.html becomes this -->
             <li><a href="./past-rentals.php" class="nav-link px-3 link-dark">Past rentals</a></li> <!-- Assuming past-rentals.html becomes this -->
             <li><a href="./book-a-visit.php" class="nav-link px-3 link-dark">Book a visit</a></li> <!-- Assuming book-a-visit.html becomes this -->
+            <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin'): ?>
+                    <li><a href="./admin_manage_pets.php" class="nav-link px-3 link-warning">Manage Pets</a></li>
+                 <?php endif; ?>
           </ul>
         </div>
 

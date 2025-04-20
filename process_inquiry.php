@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <br>
         <a href="contact.php" class="btn btn-primary">Back to Contact Form</a>
-        <a href="another-index.html" class="btn btn-secondary">Go to Homepage</a> <!-- Adjust link if needed -->
+        <a href="another-index.php" class="btn btn-secondary">Go to Homepage</a> <!-- Adjust link if needed -->
     </div>
 
     <!-- Bootstrap JS -->

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $target_table = null; // Initialize target table name
         switch ($category) {
             case 'Reptile':
-                $target_table = 'pets'; // Reptiles go into the original 'pets' table
+                $target_table = 'showcase_pets_snakes'; // Reptiles go into the original 'pets' table
                 break;
 
             case 'Aquatic':
@@ -227,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <i class="fas fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#">Dashboard</a> <!-- Placeholder links -->
+                    <a href="profile.php">Profile</a> <!-- Placeholder links -->
                     <a href="#">Settings</a>
                     <a href="logout.php">Logout</a> <!-- Assuming you have logout -->
                 </div>

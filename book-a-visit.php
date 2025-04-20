@@ -256,15 +256,18 @@
         <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
             <div class="d-flex align-items-center">
-            <a href="another-index.html" class="d-flex align-items-center text-decoration-none me-4">
+            <a href="another-index.php" class="d-flex align-items-center text-decoration-none me-4">
                 <img src="./images/file.png" alt="Paw Logo" class="paw-logo">
                 <span class="fs-4 fw-bold text-dark">PawPeace</span>
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
-                <li><a href="./another-index.html" class="nav-link px-3 link-dark active">Home</a></li>
-                <li><a href="./another-random.html" class="nav-link px-3 link-dark">Rent-a-pet</a></li>
-                <li><a href="./past-rentals.html" class="nav-link px-3 link-dark">Past rentals</a></li>
-                <li><a href="book-a-visit.html" class="nav-link px-3 link-dark">Book a visit</a></li>
+                <li><a href="./another-index.php" class="nav-link px-3 link-dark active">Home</a></li>
+                <li><a href="./another-random.php" class="nav-link px-3 link-dark">Rent-a-pet</a></li>
+                <li><a href="./past-rentals.php" class="nav-link px-3 link-dark">Past rentals</a></li>
+                <li><a href="book-a-visit.php" class="nav-link px-3 link-dark">Book a visit</a></li>
+                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin'): ?>
+                    <li><a href="./admin_manage_pets.php" class="nav-link px-3 link-warning">Manage Pets</a></li>
+                 <?php endif; ?>
             </ul>
             </div>
 
@@ -279,7 +282,7 @@
                 <span class="d-none d-sm-inline">My Account</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Favorites</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fas fa-history me-2"></i>Rental History</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
